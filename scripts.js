@@ -15,14 +15,15 @@ $(document).ready(function() {
 $(document).ready(function() {
 
   $('#paginacao-botoes .btn').on('click', function() {
-  //  alert($(this).val());
+    alert($(this).val());
     numPag = $(this).val();
     switch (numPag) {
       case "0":
         $("p").append(document.createTextNode(numPag));
         break;
-      case "1"?
+      case "1":
         $("p").append(document.createTextNode(numPag));
+        break;
     }
   });
 });
