@@ -3,6 +3,8 @@ let contador = 0;
 let paginaAtual = 0;
 
 $(document).ready(function() {
+  var globalDiv = $('.conteudo1').html();
+  $('.divGlobal').html(globalDiv);
   paginas.push('1');
   paginas.push('2','3','4','5','6','7','8','9','10'); //refatorar isso aqui
   console.log(paginas);
