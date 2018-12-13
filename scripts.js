@@ -1,6 +1,6 @@
 let paginas = new Array();
 let contador = 0;
-let paginaAtual = 0;
+let paginaAtual = 1;
 
 $(document).ready(function() {
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
         '<button type="button" class="btn btn-primary" value="'+contador+'" >' + item + '</button>');
         //o value dele n ta dando append no paragrafo
   });
-  $('div#paginacao-botoes').append('<button type="button" class="btn btn-primary">' + 'Próximo' + '</button>');
+  $('div#paginacao-botoes').append('<button type="button" class="btn btn-primary" value="100" > ' + 'Próximo' + '</button>');
   $('div#paginacao-botoes').append('<button type="button" class="btn btn-primary">' + 'Último' + '</button>');
 });
 
@@ -56,6 +56,16 @@ $(document).ready(function() {
         var globalDiv = $('.conteudo2').html();
         $('.divGlobal').html(globalDiv);
         break;
+      case "100":
+        if(paginaAtual < 10){
+          var proximaPagina = paginaAtual + 1;
+          proximaPagina = proximaPagina.toString();
+          paginaAtual = proximaPagina;
+          console.log('proxima pagina: '+proximaPagina);
+          var a = '.conteudo';
+          var globalDiv = $(a.concat(proximaPagina)).html();
+          $('.divGlobal').html(globalDiv);
+        }
     }
   });
 });
