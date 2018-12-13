@@ -19,6 +19,7 @@ h1{
   margin: 0px;
   min-height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 html {
@@ -29,11 +30,6 @@ html {
 }
 
 body {
-   /*só pra ver os limites do body
-   box-sizing: border-box;
-   border: solid red 5px;
-   border-radius: 2em;
-*/
    min-height: 100%;
    margin: 0px;
    min-height: 100%;
@@ -52,11 +48,18 @@ body {
   border-radius: 25px;
 }
 
+.conteudo1,.conteudo2{
+  position: fixed;
+}
+
 .page-content{
   background: #8FBC8F;
   display: inline-block;
   width: 100%;
   max-width: 660px;
+  /* se for pra colocar num tamanho fixo na pagina
+  position: fixed;
+  margin-top: -1600px;*/
 }
 
 .btn btn-primary{
@@ -72,4 +75,8 @@ body {
 }
 .conteudo2{
   visibility: hidden;
+}
+
+h3 {
+   font-family: 'Righteous', cursive;
 }

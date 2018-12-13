@@ -3,6 +3,11 @@ let contador = 0;
 let paginaAtual = 0;
 
 $(document).ready(function() {
+
+  //removendo divs inutilizaveis
+  $( "conteudo1" ).remove();
+
+
   var globalDiv = $('.conteudo1').html();
   $('.divGlobal').html(globalDiv);
   paginas.push('1');
