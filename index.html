@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">-->
   <link rel="stylesheet" href="estilo.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="jquery.twbsPagination.js"></script>
@@ -13,6 +14,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto'>
 
     <div class="wrapper">
       <div class="container">
@@ -111,12 +114,51 @@
               Desde que sejam usadas em pares. Isto é, sempre que abrir com aspas simples, feche com aspas simples. E sempre que abrir com aspas duplas, feche com aspas duplas.<br><br>
 
               1) Qual destas opções mostra corretamente a frase “Os 3 porquinhos e o lobo mau” na tela, em Python?
-              <form action="" class="questaoSelecionar">
+              <!--<form action="" class="questaoSelecionar">
                 <input type="radio" name="print" value="1"><font face="Courier new">pprintt(“Os 3 porquinhos e o lobo mau”)<br>
                 <input type="radio" name="print" value="2">print(“Os 3 porquinhos e o lobo mau”)<br>
                 <input type="radio" name="print" value="3">print(Os 3 porquinhos e o lobo mau)<br>
                 <input type="radio" name="print" value="4">print(‘Os 3 porquinhos e o lobo mau”)</font><br>
-              </form> <br>
+              </form> <br>-->
+              <div class="container2">
+              	<ul class="list">
+              		<li class="list__item">
+              			<input type="radio" class="radio-btn" name="choice" id="a-opt" />
+              			<label for="a-opt" class="label"><font face="Courier new" >pprintt(“Os 3 porquinhos e o lobo mau”)</label>
+              		</li>
+
+              		<li class="list__item">
+              			<input type="radio" class="radio-btn" name="choice" id="b-opt" />
+              			<label for="b-opt" class="label">print(“Os 3 porquinhos e o lobo mau”)</label>
+              		</li>
+
+              		<li class="list__item">
+              			<input type="radio" class="radio-btn" name="choice" id="c-opt" />
+              			<label for="c-opt" class="label">print(Os 3 porquinhos e o lobo mau)</label>
+              		</li>
+
+              		<li class="list__item">
+              			<input type="radio" class="radio-btn" name="choice" id="d-opt" />
+              			<label for="d-opt" class="label">print(‘Os 3 porquinhos e o lobo mau”)</font></label>
+              		</li>
+              	</ul>
+              </div><br>
+
+              <p align="left">2) Como podemos mostrar na tela a palavra “amarelo”?</p>
+              <textarea></textarea>
+
+              <p align="left">O que aconteceria se quiséssemos mostrar duas frases na mesma linha?</p>
+              <div class="linhaCodigo">
+                <p align="left">
+                <font face="Courier new">print(“Primeira frase.”)<br>
+                print(“Segunda frase.”)</font><br><br>
+
+                <b>Saída:</b><br><br>
+
+                Primeira frase<br>
+                Segunda frase</p>
+              </div><br><br>
+
 
 
             </div>

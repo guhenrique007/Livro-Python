@@ -39,25 +39,31 @@ $(document).ready(function() {
           var a = '.conteudo';
           var globalDiv = $(a.concat(paginaAnterior)).html();
           $('.divGlobal').html(globalDiv);
+          $('html, body').animate({scrollTop: 0}, 100, 'linear');
         }
         break;
       case "0":
         paginaAtual = 1;
         var globalDiv = $('.conteudo1').html();
         $('.divGlobal').html(globalDiv);
+        $('html, body').animate({scrollTop: 0}, 100, 'linear');
         break;
       case "1":
         paginaAtual = 1;
         var globalDiv = $('.conteudo1').html();
         $('.divGlobal').html(globalDiv);
+        $('html, body').animate({scrollTop: 0}, 100, 'linear');
         break;
       case "2":
         paginaAtual = 2;
         var globalDiv = $('.conteudo2').html();
         $('.divGlobal').html(globalDiv);
+        $('html, body').animate({scrollTop: 0}, 100, 'linear');
         break;
       case "100":
         if(paginaAtual < 10){
+          console.log('pagina atual: ' +paginaAtual);
+          paginaAtual = parseInt(paginaAtual);
           var proximaPagina = paginaAtual + 1;
           proximaPagina = proximaPagina.toString();
           paginaAtual = proximaPagina;
@@ -65,6 +71,7 @@ $(document).ready(function() {
           var a = '.conteudo';
           var globalDiv = $(a.concat(proximaPagina)).html();
           $('.divGlobal').html(globalDiv);
+          $('html, body').animate({scrollTop: 0}, 100, 'linear');
         }
     }
   });
