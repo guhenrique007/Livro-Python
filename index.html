@@ -17,6 +17,55 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto'>
 
+	<div id="loginModal" class="modal">
+		<div class="modal-content">
+				<div class="modal-header">
+					<span class="closeBtn"></span>
+					<h2 class="aceeso_modal">Acesso </h2>
+				</div>
+				<div class="modal-body">
+						<footer class="existente">
+						 <b><p class="tituloM" id="tituloExist">ENTRE COM ALUNO EXISTENTE</p></b>
+						 <div id="existenteL" style="display: block;">
+
+							<p class="p_modal"> ESCOLA: <select class="lista-escola" id="lista-escola" name="escola"></select></p>
+							<p class = "p_modal">ALUNO: &#160;
+              <select class="lista-aluno" id="lista-aluno" name="aluno"><option>ALUNO</option></select></p>
+
+						</div>
+					</footer>
+
+					<div class="novoUser">
+
+						<b><p class="tituloM" id="tituloNovo" onclick="">ENTRE COM NOVO ALUNO</p></b>
+						<div id="novo-aluno" style="display: none;">
+							<div class="deficiencias">
+								<input type="checkbox" id="d_auditiva" name="opcoes" value="dAuditiva" /> PESSOA COM SURDEZ<br />
+								<input type="checkbox" id="d_visual" name="opcoes" value="dVisual" /> PESSOA CEGA<br />
+								<input type="checkbox" id="d_baixa_visao" name="opcoes" value="dBaixaVisao" /> PESSOA COM BAIXA VISÃO<br />
+								<input type="checkbox" id="d_intelectual" name="opcoes" value="dIntelectual" /> PESSOA COM D.I.<br />
+								<!-- input type="checkbox" id="d_motora" name="opcoes" value="dMotora" /> PESSOA COM D.M.<br /-->
+								<input type="checkbox" id="d_autismo" name="opcoes" value="dAutismo" /> PESSOA COM AUTISMO<br />
+							</div>
+
+							<div class="start-aluno">
+								<input type="text" class="input_matricula" id="form_matricula" placeholder="Aluno" />
+								<p class="campo_modal"><input type="text" class="input_matricula" id="form_aplicador" placeholder="Aplicador" /></p>
+								<p class="campo_modal"><input type="text" class="input_matricula" id="form_escola" placeholder="Escola" /> </p>
+							</div>
+						</div>
+						<p><input class="button_matricula" id="btn_matricula" value="Começar" type="button" onclick="verificaCamposModal()" /></p>
+
+					</div>
+
+				</div>
+		</div>
+	</div>
+
+
+
+
+
     <div class="wrapper">
       <div class="container">
 

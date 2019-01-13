@@ -1,12 +1,15 @@
 let paginas = new Array();
 let contador = 0;
 let paginaAtual = 1;
+let esconderModal = true;
 
 $(document).ready(function() {
 
   //removendo divs inutilizaveis
   $( "conteudo1" ).remove();
-
+  
+  //ativando-desativando modal
+  if(esconderModal){$('.modal').css("display","none")};
 
   var globalDiv = $('.conteudo1').html();
   $('.divGlobal').html(globalDiv);
@@ -76,3 +79,100 @@ $(document).ready(function() {
     }
   });
 });
+
+
+function novoAcesso(){
+	var modal = document.getElementById('loginModal');
+}
+
+function verificaCamposModal() {
+	var checked = verifica_checked();
+	var selected = verifica_selected();
+
+	if (selected == false && checked == false) {
+		alert("Por favor, selecione um aluno previamente cadastrado OU entre com os dados, caso o aluno não esteja na lista");
+	} else {
+		var modal = document.getElementById('loginModal');
+		modal.style.display = 'none';
+		document.body.style.overflow = 'auto';
+		//salvaNomeAluno();
+	}
+}
+
+function verifica_checked() {
+	var checkBox_auditiva = document.getElementById("d_auditiva");
+	var checkBox_visual = document.getElementById("d_visual");
+	var checkBox_baixa_visao = document.getElementById("d_baixa_visao");
+	var checkBox_intelectual = document.getElementById("d_intelectual");
+	var checkBox_autismo = document.getElementById("d_autismo");
+
+	var checked = false;
+
+	if (checkBox_auditiva.checked || checkBox_visual.checked
+			|| checkBox_baixa_visao.checked || checkBox_intelectual.checked
+			|| checkBox_autismo.checked) {
+		checked = true;
+	}
+
+	if (document.getElementById("form_matricula").value == "") {
+		document.getElementById("form_matricula").focus();
+		checked = false;
+	} else if (document.getElementById("form_aplicador").value == "") {
+		document.getElementById("form_aplicador").focus();
+		checked = false;
+
+	} else if (document.getElementById("form_escola").value == "") {
+		document.getElementById("form_escola").focus();
+		checked = false;
+	}
+	return checked
+}
+
+function verifica_selected() {
+	var selected = false
+	var label_escola = $("#lista-escola option:selected").val();
+	var label_aluno = $("#lista-aluno option:selected").val();
+
+	if (label_escola != "ESCOLA" && label_escola != "ALUNO") {
+		selected = true;
+	}
+	return selected
+}
+
+/* MODAL */
+window.onload = function() {
+	var preModal = document.getElementById('preModal');
+	//var videoModal = document.getElementById('video-modal');
+	//var modalDeErro = document.getElementById('erroModal');
+	var closeBtn = document.getElementsByClassName('button_matricula')[0];
+	var closeBtnModal = document.getElementsByClassName('close_modal')[0];
+	var closeErro = document.getElementsByClassName('close_erroModal')[0];
+	var tituloUp = document.getElementById('tituloNovo');
+	var tituloIn = document.getElementById('tituloExist');
+	var listasIn = document.getElementById('existenteL');
+	var listasUp = document.getElementById('novo-aluno');
+
+/*
+	closeBtnModal.addEventListener('click', function() {
+		videoModal.style.display = 'none';
+		document.body.style.overflow = 'auto';
+	}); 
+
+	closeErro.addEventListener('click', function() {
+		modalDeErro.style.display = 'none';
+		document.body.style.overflow = 'auto';
+	}); */
+
+	tituloUp.addEventListener('click', function() {
+		// alert('clicou');
+		listasIn.style.display = 'none';
+		listasUp.style.display = 'block';
+	});
+
+	tituloIn.addEventListener('click', function() {
+		// alert('clicou');
+		listasIn.style.display = 'block';
+		listasUp.style.display = 'none';
+	});
+
+}
